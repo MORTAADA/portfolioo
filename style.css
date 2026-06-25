@@ -16,7 +16,7 @@
    1. CONFIGURATION GÉNÉRALE & AMBIANCE LABO
    ========================================================================== */
 body {
-    background-color: transparent;
+    background-color: #0b0f19; /* Bloque définitivement l'apparition du fond blanc */
     color: #e2e8f0;
     font-family: 'Courier New', Courier, monospace;
     margin: 0;
@@ -25,6 +25,7 @@ body {
     flex-direction: column;
     align-items: center;
     min-height: 100vh;
+    overflow-x: hidden; /* Évite les secousses latérales globales */
 }
 
 header {
@@ -60,7 +61,7 @@ header p {
 
 /* Brique élémentaire */
 .element {
-    background: rgba(11, 15, 25, 0.6);
+    background: rgba(11, 15, 25, 0.7);
     backdrop-filter: blur(4px);
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 6px;
@@ -232,4 +233,42 @@ hr {
     font-size: 1rem;
     line-height: 1.6;
     color: #cbd5e1;
+}
+
+/* ==========================================================================
+   6. OPTIMISATION ET RESPONSIVITÉ MOBILE (Nouveau)
+   ========================================================================== */
+.table-container {
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: auto;
+    padding: 15px 0;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Personnalisation de la barre de défilement mobile */
+.table-container::-webkit-scrollbar {
+    height: 5px;
+}
+.table-container::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.01);
+}
+.table-container::-webkit-scrollbar-thumb {
+    background: rgba(74, 222, 128, 0.2);
+    border-radius: 10px;
+}
+
+@media (max-width: 950px) {
+    header h1 {
+        font-size: 1.7rem;
+        letter-spacing: 3px;
+    }
+    header p {
+        font-size: 0.85rem;
+        padding: 0 15px;
+    }
+    .periodic-table {
+        padding-left: 30px; /* Donne du confort au glissement de doigt */
+        padding-right: 30px;
+    }
 }
