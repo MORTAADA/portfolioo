@@ -155,7 +155,7 @@ const projectData = {
         title: "Chimie Organique Structurelle",
         symbol: "Co",
         color: "#c084fc",
-        desc: "Analyse des mécanismes réactionnels, stéréochimie, synthèse et modélisation géométrique tridimensionnelle des squelettes carbonés."
+        desc: "Analyse des mécanismes réactionnels, stéréochimie, synthesis et modélisation géométrique tridimensionnelle des squelettes carbonés."
     },
     "physique-solide": {
         title: "Physique du Solide",
